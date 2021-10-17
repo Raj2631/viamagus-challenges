@@ -1,12 +1,16 @@
 import React from "react";
 import { Switch, Route } from "react-router";
-import Challenge1 from "./pages/Challenge1";
+import Login from "./pages/Login";
+import Video from "./pages/Video";
 
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/challenge_1">
-        <Challenge1 />
+      <Route path="/login">
+        <Login />
+      </Route>
+      <Route path="/video">
+        <Video />
       </Route>
     </Switch>
   );

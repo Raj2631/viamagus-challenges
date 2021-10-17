@@ -24,7 +24,7 @@ const AUTHBUTTONS = [
   },
 ];
 
-const Challenge1 = () => {
+const Login = () => {
   const {
     register,
     handleSubmit,
@@ -101,4 +101,4 @@ const Challenge1 = () => {
   );
 };
 
-export default Challenge1;
+export default Login;
