@@ -1,0 +1,21 @@
+.Btn {
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4285f4;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+  &:hover {
+    background-color: #1877f2;
+  }
+  img {
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
