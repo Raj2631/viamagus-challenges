@@ -18,4 +18,10 @@
     top: 50%;
     transform: translateY(-50%);
   }
+
+  @media only screen and (max-width: 450px) {
+    img {
+      display: none;
+    }
+  }
 }
