@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import classes from "./index.module.scss";
@@ -39,6 +40,9 @@ const Login = () => {
 
   return (
     <div className={classes.Container}>
+      <Helmet>
+        <title>Login Challenge</title>
+      </Helmet>
       <header className={classes.Header}></header>
       <main>
         <div className={classes.MainContainer}>

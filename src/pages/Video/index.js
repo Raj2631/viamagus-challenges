@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player";
+import { Helmet } from "react-helmet";
 import ReactDom from "react-dom";
 import classes from "./index.module.scss";
 
@@ -16,18 +17,23 @@ const RED_CIRCLE_STYLES = {
 const Video = () => {
   const [showRedCircle, setShowRedCircle] = useState(false);
   return (
-    <div
-      className={classes.Container}
-      onMouseOver={() => setShowRedCircle(true)}
-      onMouseLeave={() => setShowRedCircle(false)}
-    >
-      <ReactPlayer url="https://www.youtube.com/watch?v=1w7OgIMMRc4" />
-      {showRedCircle &&
-        ReactDom.createPortal(
-          <div style={RED_CIRCLE_STYLES} />,
-          document.getElementById("portal")
-        )}
-    </div>
+    <>
+      <Helmet>
+        <title>Video Challenge</title>
+      </Helmet>
+      <div
+        className={classes.Container}
+        onMouseOver={() => setShowRedCircle(true)}
+        onMouseLeave={() => setShowRedCircle(false)}
+      >
+        <ReactPlayer url="https://www.youtube.com/watch?v=1w7OgIMMRc4" />
+        {showRedCircle &&
+          ReactDom.createPortal(
+            <div style={RED_CIRCLE_STYLES} />,
+            document.getElementById("portal")
+          )}
+      </div>
+    </>
   );
 };
 
