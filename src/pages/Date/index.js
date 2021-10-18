@@ -15,14 +15,12 @@ const DateChallenge = () => {
     if (duration === "") {
       return;
     }
-    console.log("calc dinal", initialDateTime);
     const initDate = new Date(initialDateTime.toJSON());
     const nextDayOfMonth = initDate.getDate() + parseInt(duration);
     initDate.setDate(nextDayOfMonth);
     setFinalDate(initDate);
   };
 
-  console.log(finalDate);
   return (
     <div className={classes.Container}>
       <Helmet>
