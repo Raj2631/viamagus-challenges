@@ -1,9 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet";
+
 import Input from "../../components/Input";
 import Button from "../../components/Button";
+
 import classes from "./index.module.scss";
+
 import treeImg from "../../assets/tree.png";
 import googleImg from "../../assets/google.png";
 import amazonImg from "../../assets/amazon.png";
@@ -12,7 +15,7 @@ import facebookImg from "../../assets/facebook.png";
 const EMAIL_VALIDATION_PATTERN =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-const AUTHBUTTONS = [
+const AUTH_BUTTONS = [
   {
     title: "CONTINUE WITH GOOGLE",
     image: googleImg,
@@ -52,11 +55,7 @@ const Login = () => {
           <div className={classes.FormContainer}>
             <h1>Login</h1>
             <img src={treeImg} className={classes.TreeImg} alt="tree" />
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              autoComplete="off"
-              className={classes.Form}
-            >
+            <form onSubmit={handleSubmit(onSubmit)} className={classes.Form}>
               <Input
                 title="Email"
                 register={register("email", {
@@ -93,7 +92,7 @@ const Login = () => {
             </div>
             <p className={classes.AlignCenter}>or</p>
 
-            {AUTHBUTTONS.map(({ variant, title, image }) => (
+            {AUTH_BUTTONS.map(({ variant, title, image }) => (
               <Button variant={variant} image={image}>
                 {title}
               </Button>

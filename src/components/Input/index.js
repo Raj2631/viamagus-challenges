@@ -1,5 +1,7 @@
 import React from "react";
+
 import classes from "./index.module.scss";
+
 import { ReactComponent as ErrorIcon } from "../../assets/error.svg";
 
 const index = ({ title, register, error, ...props }) => {
